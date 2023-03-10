@@ -2,4 +2,74 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #499A18;
 }
+
+body {
+  padding: 20px;
+  background-color: #EDF2EC;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.9375rem;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.accrodion__item {
+  width: 100%;
+  list-style: none;
+  border-bottom: 2px solid #99939354;
+  padding: 0.625rem 0;
+}
+
+.accrodion__item:first-child {
+  border-top: 2px solid #99939354;
+}
+
+.accrodion__item:last-child {
+  border-bottom: none;
+}
+
+.accordion__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion__text {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.accordion__btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url(./images/icons/cross.svg);
+  background-position: center;
+  background-size: cover;
+  transform: rotate(45deg);
+  transition: transform .5s ease;
+}
+
+.accordion__meme {
+  width: 70%;
+  margin: 0.625rem auto;
+}
+
+.meme__img {
+  width: 100%;
+  display: block;
+}
+
