@@ -11,12 +11,12 @@
 html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #E06733; /*#499A18 for open state*/
-  font-size: 14px;
+  font-size: 14px; /*in order to have the possibility of 'rem' using*/
 }
 
 @media (min-width: 381px) { /*for a taplets*/
   html {
-    font-size: 16px;
+    font-size: 16px; 
   }
 }
 
@@ -28,7 +28,7 @@ html {
 
 body {
   padding: 20px;
-  background-color: #EDF2EC;
+  background-color: #bcd4b7;
 }
 
 .wrapper {
