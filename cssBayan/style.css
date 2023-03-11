@@ -2,8 +2,24 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #499A18;
+  color:  #499A18; /*#E06733 for close state*/
+  font-size: 14px;
+}
+
+@media (min-width: 381px) { /*for a taplets*/
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 821px) { /*for a laptops*/
+  html {
+    font-size: 20px;
+  }
 }
 
 body {
@@ -13,12 +29,25 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
+}
+
+@media (min-width: 600px) { /*for a tablets with the screen larger than 600px*/
+  .wrapper {
+    width: 80%;
+  }
+}
+
+@media (min-width: 821px) { /*for a laptops*/
+  .wrapper {
+    width: 60%;
+  }
 }
 
 .heading {
   font-size: 2.5rem;
   font-weight: 600;
+  line-height: 1.0;
   margin-bottom: 0.9375rem;
 }
 
@@ -46,16 +75,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 0.5%;
 }
 
 .accordion__text {
   font-size: 1.5rem;
   font-weight: 600;
+  line-height: 1.0;
+  margin-right: 1.25rem;
 }
 
 .accordion__btn {
-  width: 1.5rem;
-  height: 1.5rem;
+  flex: 0 0 1rem;
+  height: 1rem;
   background: url(./images/icons/cross.svg);
   background-position: center;
   background-size: cover;
