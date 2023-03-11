@@ -125,9 +125,6 @@ body {
 .accordion__meme {
   width: 70%;
   margin: 0.625rem auto;
-  /* max-height: 0;
-  overflow: hidden;
-  transition: max-height 1s ease-in-out; */
   overflow: hidden;
   max-height: 0;
   scale: 0;
@@ -142,4 +139,36 @@ body {
 .meme__img {
   width: 100%;
   display: block;
+}
+
+@media (hover :hover) {
+  .accordion:hover {
+    cursor: pointer;
+  }
+
+  .accordion:hover .accordion__text {
+    color: #499A18;
+  }
+
+  .accordion:hover .accordion__btn svg path {
+    fill: #499A18;
+  }  
+
+  .accordion__btn {
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+  }
+
+  .accordion:hover .accordion__btn {
+    visibility: visible;
+  }
+
+  .accrodion__item:hover .accordion__btn {
+    transform: rotate(0deg);
+  }
+
+  .accrodion__item:hover .accordion__meme {
+    max-height: 100rem;
+    scale: 1;
+  }
 }
