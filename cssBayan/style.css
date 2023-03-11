@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #E06733; /*#499A18 for open state*/
+  font-size: 14px; /*in order to have the possibility of 'rem' using*/
+}
+
+@media (min-width: 381px) { /*for a taplets*/
+  html {
+    font-size: 16px; 
+  }
+}
+
+@media (min-width: 821px) { /*for a laptops*/
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  padding: 20px;
+  background-color: #bcd4b7;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  cursor: default;
+}
+
+@media (min-width: 600px) { /*for a tablets with the screen larger than 600px*/
+  .wrapper {
+    width: 80%;
+  }
+}
+
+@media (min-width: 821px) { /*for a laptops*/
+  .wrapper {
+    width: 60%;
+  }
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.0;
+  margin-bottom: 0.9375rem;
+  color: #499A18;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.accrodion__item {
+  width: 100%;
+  list-style: none;
+  border-bottom: 2px solid #99939354;
+  padding: 0.625rem 0;
+}
+
+.accrodion__item:first-child {
+  border-top: 2px solid #99939354;
+}
+
+.accrodion__item:last-child {
+  border-bottom: none;
+}
+
+.accordion__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 0.5%;
+}
+
+.accordion__text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.0;
+  margin-right: 1.25rem;
+  transition: color .5s ease-in-out;
+}
+
+.accrodion__item:focus .accordion__text {
+  color: #499A18;
+}
+
+.accordion__btn {
+  flex: 0 0 1rem;
+  height: 1rem;
+  transform: rotate(45deg);
+  transition: transform .5s ease;
+}
+
+.accrodion__item:focus .accordion__btn {
+  transform: rotate(0deg);
+}
+
+.accordion__btn svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.accordion__btn svg path {
+  fill: #E06733;
+  transition: fill .5s ease-in-out;
+} 
+
+.accrodion__item:focus .accordion__btn svg path {
+  fill: #499A18;
+}  
+
+.accordion__meme {
+  width: 70%;
+  margin: 0.625rem auto;
+  overflow: hidden;
+  max-height: 0;
+  scale: 0;
+  transition: all .5s ease-in-out;
+}
+
+.accrodion__item:focus .accordion__meme {
+  max-height: 100rem;
+  scale: 1;
+}
+
+.meme__img {
+  width: 100%;
+  display: block;
+}
+
+@media (hover :hover) {
+  .accordion:hover {
+    cursor: pointer;
+  }
+
+  .accordion:hover .accordion__text {
+    color: #499A18;
+  }
+
+  .accordion:hover .accordion__btn svg path {
+    fill: #499A18;
+  }  
+
+  .accordion__btn {
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+  }
+
+  .accordion:hover .accordion__btn {
+    visibility: visible;
+  }
+
+  .accrodion__item:hover .accordion__btn {
+    transform: rotate(0deg);
+  }
+
+  .accrodion__item:hover .accordion__meme {
+    max-height: 100rem;
+    scale: 1;
+  }
+
+  .accrodion__item:active .accordion__text {
+    transition: all .2s ease-in-out;
+    color: #E06733;
+  }
+
+  .accrodion__item:active .accordion__btn svg path {
+    transition: all .2s ease-in-out;
+    fill: #E06733;
+  }
+
+  .accrodion__item:active {
+    transition: all .2s ease-in-out;
+    /* filter: blur(0.7px); */
+    filter: grayscale(40%);
+  }
+}
